@@ -1,4 +1,3 @@
-
 <?php
 class Civica extends Orm {
     function __construct(PDO $conexion) {
