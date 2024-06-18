@@ -1,1 +1,395 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
 
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h1.cultural {
+    color: #4609ed;
+    font-size: 50px;
+}
+
+h1.deportiva {
+    color: #25de1f;
+    font-size: 50px;
+}
+
+h1.civica {
+    color: #e60ab2;
+    font-size: 50px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.table {
+    margin: 0 auto 1rem auto;
+    color: #212529;
+    border-collapse: collapse;
+    background-color: #fff;
+    table-layout: auto;
+    width: auto;
+    border: 1px solid #dee2e6;
+}
+
+.table th,
+.table td {
+    padding: .75rem;
+    vertical-align: middle;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table thead th {
+    vertical-align: middle;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-modificar {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-modificar:hover {
+    background-color: #5a3799;
+    border-color: #5a3799;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+#culturalModal .modal-dialog {
+    max-width: 62%;
+}
+
+#deportivaModal .modal-dialog {
+    max-width: 59%;
+}
+
+#civicaModal .modal-dialog {
+    max-width: 56%;
+}
+
+#culturalModal .table {
+    background-color: #e9ecef;
+}
+
+#deportivaModal .table {
+    background-color: #d4edda;
+}
+
+#civicaModal .table {
+    background-color: #f8d7da;
+}
+
+.btn-agregar {
+    background-color: #28a745;
+    border-color: #28a745;
+    text-decoration: none;
+}
+
+.btn-agregar:hover {
+    background-color: #218838;
+    border-color: #5dea7e;
+}
+
+.principal {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.bienvenida {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(5, 5, 5, 50);
+}
+
+.boton-actividades {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f56be7;
+    color: white;
+    border: 2px solid #f638e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-actividades:hover {
+    background-color: #490540;
+    border-color: #f538d8;
+}
+
+.btn-regresar {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btn-regresar:hover {
+    background-color: darkorange;
+}
+
+.container {
+    position: relative;
+}
+
+
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    color: #212529; /* Color del texto */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif; /* Fuente diferente para los títulos */
+    font-size: 2rem; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Colores para los títulos */
+h1.cultural {
+    color: #4609ed;
+    font-size: 50px;
+}
+
+h1.deportiva {
+    color: #25de1f;
+    font-size: 50px; /* Color para actividades deportivas */
+}
+
+h1.civica {
+    color: #e60ab2;
+    font-size: 50px; /* Color para actividades cívicas */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    margin-left: 95px;
+}
+
+.table {
+    
+    margin: 0 auto 1rem auto; /* Centrando la tabla */
+    color: #212529;
+    border-collapse: collapse;
+    background-color: #fff; /* Fondo de la tabla */
+    table-layout: auto; /* Ancho automático */
+    width: auto; /* Ancho automático */
+    border: 1px solid #dee2e6; /* Bordes de la tabla */
+}
+
+.table th,
+.table td {
+    padding: .75rem;
+    vertical-align: middle;
+    border: 1px solid #dee2e6; /* Agregar bordes a las celdas */
+    text-align: center; /* Alineación del texto en el centro */
+    white-space: nowrap; /* Evita que el contenido se ajuste automáticamente */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) cuando el contenido se desborda */
+}
+
+.table thead th {
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    border-bottom: 2px solid #dee2e6;
+    background-color: #007bff; /* Fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+}
+
+/* Estilos alternativos para las filas */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.1); /* Color de fondo alternativo */
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block; /* Alinear los botones en línea */
+    margin: 5px; /* Margen entre botones */
+    padding: 0.5rem 1rem; /* Padding dentro de los botones */
+    font-size: 1rem; /* Tamaño de la fuente */
+    color: #fff; /* Color del texto */
+    border: 1px solid; /* Color del borde */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    text-align: center;
+}
+
+/* Estilos específicos para los botones de modificar y eliminar */
+.btn-modificar {
+    background-color: #6f42c1; /* Color morado */
+    border-color: #6f42c1; /* Color del borde */
+}
+
+.btn-modificar:hover {
+    background-color: #379947; /* Color morado oscuro al pasar el mouse */
+    border-color: #5a3799; /* Color del borde al pasar el mouse */
+}
+
+.btn-eliminar {
+    background-color: #dc3545; /* Color rojo */
+    border-color: #dc3545; /* Color del borde */
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333; /* Color rojo oscuro al pasar el mouse */
+    border-color: #bd2130; /* Color del borde al pasar el mouse */
+}
+
+.btn-ver{
+    background-color: #2cd9d6; /* Color morado */
+    border-color: #42a8c1; /* Color del borde */
+}
+
+.btn-ver:hover {
+    background-color: #2691c0; /* Color rojo oscuro al pasar el mouse */
+    border-color: #37b3c3; /* Color del borde al pasar el mouse */
+}
+
+/* Ajustar el ancho del modal-dialog */
+#culturalModal .modal-dialog {
+    max-width: 62%; /* Ancho máximo del modal-dialog para actividades culturales */
+}
+
+#deportivaModal .modal-dialog {
+    max-width: 59%; /* Ancho máximo del modal-dialog para actividades deportivas */
+}
+
+#civicaModal .modal-dialog {
+    max-width: 56%; /* Ancho máximo del modal-dialog para actividades cívicas */
+}
+
+/* Estilos para la tabla cultural */
+#culturalModal .table {
+    background-color: #e9ecef; /* Color de fondo para la tabla cultural */
+}
+
+/* Estilos para la tabla deportiva */
+#deportivaModal .table {
+    background-color: #d4edda; /* Color de fondo para la tabla deportiva */
+}
+
+/* Estilos para la tabla cívica */
+#civicaModal .table {
+    background-color: #f8d7da; /* Color de fondo para la tabla cívica */
+}
+
+.btn-agregar {
+    background-color: #28a745; /* Color verde */
+    border-color: #28a745; /* Color del borde */
+}
+
+.btn-agregar:hover {
+    background-color: #218838; /* Color verde oscuro al pasar el mouse */
+    border-color: #5dea7e; /* Color del borde al pasar el mouse */
+}
+.principal {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+  .bienvenida {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Color verde */
+    font-family: 'Arial Black', sans-serif; /* Fuente Arial Black */
+    text-shadow: 2px 2px 4px rgba(5,5,5,50); /* Sombra del texto */
+  }
+
+  .boton-actividades {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: white;
+    border: 2px solid #f1d505;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .boton-actividades:hover {
+    background-color: #ff8a05;
+    border-color: #ff5918;
+  }
+  .btn-regresar {
+    background-color: orange; /* Color naranja */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para mantener el tamaño correcto */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la parte derecha */
+}
+.btn-regresar:hover {
+    background-color: darkorange; /* Color naranja oscuro al pasar el ratón */
+}
+.container {
+    position: relative; /* Necesario para que el botón absoluto se posicione dentro del contenedor */
+}

@@ -1,0 +1,54 @@
+.modal {
+    display: none; /* Por defecto oculto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Z-index alto para estar sobre todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrado vertical y horizontal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.modal-content p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.modal-buttons {
+    text-align: right;
+   
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.mensaje-eliminado {
+    display: none; /* Oculto por defecto */
+}
+
+
+/* Estilo personalizado para el botón de cerrar */
+.btn-cancelar-modal {
+    background-color: #358bdc; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-cancelar-modal:hover {
+    background-color: #239fc8; /* Rojo oscuro */
+}
