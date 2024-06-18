@@ -19,7 +19,7 @@ class DataBase{
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ];
-        $dsn = "mysql:host=localhost;dbname=extraescolaresbd";
+        $dsn = "mysql:host=localhost;dbname=extraescolaresdb";
         $user = "root";
         $password = "";
         $this->connection = new PDO($dsn, $user, $password, $options);

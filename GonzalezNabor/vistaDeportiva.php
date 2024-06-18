@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-// Verificar si el usuario está autenticado y es administrador
+
 if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_rol'] !== 'administrador') {
     header('Location: Login.php');
     exit;
@@ -69,7 +69,7 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
         if ($datos !== null) {
             $deportivas = $datos['deportivas'];
 
-            // Mostrar actividades deportivas
+
             echo "<table class='table table-striped'>";
             echo "<h1 class='deportiva'><b> ACTIVIDADES DEPORTIVAS </b></h1>";
             echo "<thead><tr>
@@ -129,7 +129,7 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
         
 
 
-        <!-- Modal de confirmación -->
+   
         <div id="modalConfirmacion" class="modal">
             <div class="modal-content">
                 <p>¿Seguro que desea eliminar este registro?</p>
@@ -140,7 +140,6 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
             </div>
         </div>
 
-        <!-- Modal de mensaje de eliminación correcta -->
         <div id="modalMensajeEliminado" class="modal">
             <div class="modal-content">
                 <p>Registro eliminado correctamente.</p>
@@ -150,7 +149,7 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
             </div>
         </div>
 
-        <!-- Modal de detalles -->
+    
         <div id="modalDetalles" class="modal">
             <div class="modal-content">
                 <h4>Detalles de la Actividad</h4>
@@ -163,70 +162,69 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
 
        
         <script>
-        // Función para mostrar el modal de confirmación
+
         function confirmarEliminacion(id) {
             var modal = document.getElementById('modalConfirmacion');
             var form = document.getElementById('formEliminar' + id);
             modal.style.display = 'block';
 
-            // Almacenar el formulario actual para enviarlo en caso de confirmación
             window.currentForm = form;
         }
 
-        // Función para cerrar el modal de confirmación
+    
         function cerrarModal() {
             var modal = document.getElementById('modalConfirmacion');
             modal.style.display = 'none';
         }
 
-        // Función para cerrar el modal de mensaje eliminado
+ 
         function cerrarMensajeEliminado() {
             var modal = document.getElementById('modalMensajeEliminado');
             modal.style.display = 'none';
         }
 
-        // Función para eliminar el registro si se confirma
+ 
         function eliminarRegistro() {
             if (window.currentForm) {
-                // Enviar el formulario
+      
                 var xhr = new XMLHttpRequest();
                 xhr.open(window.currentForm.method, window.currentForm.action, true);
                 xhr.onload = function () {
                     if (xhr.status >= 200 && xhr.status < 400) {
-                        // Éxito en la eliminación
+                    
                         var response = JSON.parse(xhr.responseText);
                         if (response.success) {
-                            // Mostrar mensaje de eliminado correctamente
+                          
                             mostrarMensajeEliminado();
                             var fila = document.getElementById('fila' + response.id);
                             if (fila) {
                                 fila.parentNode.removeChild(fila); // Eliminar la fila de la tabla
                             }
                         } else {
-                            // Mostrar mensaje de error
+                          
                             alert('Error al eliminar el registro.');
                         }
                     } else {
-                        // Mostrar mensaje de error
+                       
                         alert('Error al comunicarse con el servidor.');
                     }
                 };
                 xhr.onerror = function () {
-                    // Mostrar mensaje de error
+                  
                     alert('Error de comunicación.');
                 };
                 xhr.send(new FormData(window.currentForm));
-                cerrarModal(); // Cerrar el modal de confirmación
+                cerrarModal(); 
             }
         }
 
-        // Función para mostrar el modal de mensaje de eliminación correcta
+     
         function mostrarMensajeEliminado() {
             var modal = document.getElementById('modalMensajeEliminado');
             modal.style.display = 'block';
         }
 
-        // Función para mostrar detalles de la actividad
+     
         function verDetalles(deportiva) {
             var modal = document.getElementById('modalDetalles');
             var detallesActividad = document.getElementById('detallesActividad');
@@ -243,7 +241,7 @@ $Nombre_Sesion_Activa = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_
             modal.style.display = 'block';
         }
 
-        // Función para cerrar el modal de detalles
+     
         function cerrarModalDetalles() {
             var modal = document.getElementById('modalDetalles');
             modal.style.display = 'none';
